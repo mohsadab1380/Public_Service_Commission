@@ -1,5 +1,17 @@
 package cen413.public_service_commission;
 
+ Tahmid_2430835
+import java.io.Serializable;
+
+public abstract class User implements Serializable {
+    final private String name, gender;
+    private int age;
+
+    public User(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+
 import java.time.LocalDate;
 
 public abstract class User {
@@ -22,6 +34,7 @@ public abstract class User {
 
     public int getId() {
         return id;
+master
     }
 
     public String getName() {
@@ -31,6 +44,14 @@ public abstract class User {
     public String getGender() {
         return gender;
     }
+
+Tahmid_2430835
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
 
     public String getUserName() {
         return userName;
@@ -74,11 +95,20 @@ public abstract class User {
 
     public void setDob(LocalDate dob) {
         this.dob = dob;
+ master
     }
 
     @Override
     public String toString() {
         return "User{" +
+ Tahmid_2430835
+                "name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
@@ -110,3 +140,4 @@ public abstract class User {
     public abstract void updateProfile();
     //public  void updateProfile(){}
 }
+ master

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="postNameTF" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.HRexecutive">
+   <children>
+      <TextField fx:id="postNameTF" layoutX="219.0" layoutY="55.0" />
+      <Text layoutX="103.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Post Name :" />
+      <TextField fx:id="departmentTF" layoutX="219.0" layoutY="100.0" />
+      <Text layoutX="103.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department :" />
+      <TextField fx:id="qualificationTF" layoutX="225.0" layoutY="159.0" />
+      <Text layoutX="103.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualification :" />
+      <Button layoutX="242.0" layoutY="227.0" mnemonicParsing="false" onAction="#confirmRecruitmentButtonOA" text="Confirm Recruitment" />
+   </children>
+</AnchorPane>

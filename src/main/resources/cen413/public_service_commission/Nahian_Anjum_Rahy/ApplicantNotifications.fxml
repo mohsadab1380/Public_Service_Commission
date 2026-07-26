@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="569.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Nahian_Anjum_Rahy.ApplicantController">
+   <children>
+      <Button layoutX="54.0" layoutY="27.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="103.0" text="Back" />
+      <Label layoutX="301.0" layoutY="32.0" prefHeight="54.0" prefWidth="382.0" text="All Notifications and Updates">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="226.0" layoutY="125.0" prefWidth="150.0" />
+      <ComboBox layoutX="552.0" layoutY="125.0" prefWidth="150.0" />
+      <Label layoutX="115.0" layoutY="129.0" prefHeight="18.0" prefWidth="88.0" text="FilterBy" />
+      <Label layoutX="453.0" layoutY="129.0" prefHeight="18.0" prefWidth="78.0" text="Satus" />
+      <Button layoutX="287.0" layoutY="182.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="392.0" text="Apply Filler &amp; Show on Table" />
+      <TableView layoutX="101.0" layoutY="260.0" prefHeight="200.0" prefWidth="554.0">
+        <columns>
+          <TableColumn prefWidth="110.40000915527344" text="Type" />
+          <TableColumn prefWidth="102.4000244140625" text="Subject" />
+            <TableColumn prefWidth="102.4000244140625" text="Massage" />
+            <TableColumn prefWidth="102.4000244140625" text="Date" />
+            <TableColumn prefWidth="132.80002441406248" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="user_2411699_controller.MalpracticeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Examination Malpractice Reports"/>
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Button onAction="#onPendingClick" text="Pending Cases"/>
+        <Button onAction="#onResolvedClick" text="Resolved Cases"/>
+        <Button onAction="#onValidateClick" text="Validate Recommendation"/>
+        <Button onAction="#onSubmitClick" text="Submit Decision"/>
+        <Button onAction="#onNotifyClick" text="Notify Controller of Examinations"/>
+    </HBox>
+
+    <TableView fx:id="caseTable" prefHeight="180.0">
+        <columns>
+            <TableColumn fx:id="caseIdColumn" prefWidth="110.0" text="Case ID"/>
+            <TableColumn fx:id="candidateRollColumn" prefWidth="150.0" text="Candidate Roll No."/>
+            <TableColumn fx:id="candidateNameColumn" prefWidth="160.0" text="Candidate Name"/>
+            <TableColumn fx:id="examCentreColumn" prefWidth="150.0" text="Exam Center"/>
+            <TableColumn fx:id="incidentTypeColumn" prefWidth="190.0" text="Incident Type"/>
+            <TableColumn fx:id="reportDateColumn" prefWidth="120.0" text="Report Date"/>
+            <TableColumn fx:id="statusColumn" prefWidth="110.0" text="Case Status"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="incidentLabel" style="-fx-font-weight: bold;" wrapText="true"/>
+
+    <Label style="-fx-font-weight: bold;" text="Evidence Files and Supporting Documents"/>
+    <ListView fx:id="evidenceListView" prefHeight="90.0"/>
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Label text="Disciplinary Action"/>
+        <ComboBox fx:id="actionComboBox" prefWidth="260.0"/>
+    </HBox>
+
+    <Label text="Recommendation"/>
+    <TextArea fx:id="recommendationArea" prefHeight="100.0"/>
+
+    <Label fx:id="validationLabel" style="-fx-text-fill: #b00020;" wrapText="true"/>
+    <Label fx:id="notificationLabel"/>
+    <Label fx:id="statusLabel" style="-fx-text-fill: #1b7f4b; -fx-font-weight: bold;"/>
+</VBox>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="556.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Nahian_Anjum_Rahy.ControllerOfExaminationController">
+   <children>
+      <Button layoutX="640.0" layoutY="33.0" mnemonicParsing="false" text="BACK" />
+      <Button layoutX="640.0" layoutY="83.0" mnemonicParsing="false" text="REFRESH" />
+      <Label alignment="CENTER" layoutX="263.0" layoutY="25.0" prefHeight="39.0" prefWidth="246.0" text="Center Logistics Management">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="17.0" layoutY="121.0" prefHeight="18.0" prefWidth="104.0" text="Center Code:" />
+      <Label layoutX="25.0" layoutY="73.0" prefHeight="18.0" prefWidth="95.0" text="Add New Center:" />
+      <Label layoutX="21.0" layoutY="167.0" prefHeight="18.0" prefWidth="104.0" text="Center Name:" />
+      <TextField layoutX="121.0" layoutY="117.0" />
+      <TextField layoutX="121.0" layoutY="164.0" />
+      <TextField layoutX="125.0" layoutY="70.0" />
+      <Label layoutX="30.0" layoutY="207.0" prefHeight="18.0" prefWidth="95.0" text="District:" />
+      <ComboBox layoutX="139.0" layoutY="203.0" prefWidth="150.0" />
+      <TextField layoutX="483.0" layoutY="126.0" />
+      <Label layoutX="377.0" layoutY="130.0" prefHeight="18.0" prefWidth="86.0" text="Capacity:" />
+   </children>
+</AnchorPane>

@@ -38,8 +38,8 @@
     <!-- TableView for Applicants -->
     <TableView fx:id="applicantsTableView" layoutX="20.0" layoutY="123.0" prefHeight="200.0" prefWidth="560.0">
         <columns>
-            <TableColumn fx:id="applicantIdCol" prefWidth="80.0" text="Applicant ID" />
-            <TableColumn fx:id="nameCol" prefWidth="120.0" text="Name" />
+            <TableColumn fx:id="applicantIdCol" prefWidth="87.0" text="Applicant ID" />
+            <TableColumn fx:id="nameCol" prefWidth="113.0" text="Name" />
             <TableColumn fx:id="phoneCol" prefWidth="100.0" text="Phone" />
             <TableColumn fx:id="emailCol" prefWidth="120.0" text="Email" />
             <TableColumn fx:id="ageCol" prefWidth="50.0" text="Age" />

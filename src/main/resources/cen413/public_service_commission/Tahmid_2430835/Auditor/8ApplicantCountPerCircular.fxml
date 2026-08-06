@@ -8,10 +8,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Tahmid_2430835.Auditor.GlobalDiscrepancySummary">
+<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Tahmid_2430835.Auditor.ApplicantCountPerCircular">
 
     <!-- Title Label -->
-    <Label layoutX="181.0" layoutY="10.0" text="Global Discrepancy Report">
+    <Label layoutX="181.0" layoutY="10.0" text="Applicant Count per Circular">
         <font>
             <Font name="System Bold" size="18.0" />
         </font>
@@ -23,6 +23,8 @@
             <Font size="12.0" />
         </font>
     </Label>
+
+    <!-- From Date -->
     <Label layoutX="20.0" layoutY="83.0" text="From Date:" />
     <DatePicker fx:id="fromDateDP" layoutX="100.0" layoutY="79.0" prefWidth="150.0" />
 
@@ -37,13 +39,25 @@
         </font>
     </Button>
 
-    <!-- TableView for Discrepancy Summary -->
-    <TableView fx:id="discrepancyTableView" layoutX="20.0" layoutY="123.0" prefHeight="200.0" prefWidth="560.0">
+    <!-- TableView for Circulars -->
+    <TableView fx:id="circularsTableView" layoutX="20.0" layoutY="123.0" prefHeight="160.0" prefWidth="560.0">
         <columns>
-            <TableColumn fx:id="applicantIdCol" prefWidth="257.0" text="Circular ID" />
-            <TableColumn fx:id="nameCol" prefWidth="302.0" text="Number of Discrepancy" />
+            <TableColumn fx:id="circularIdCol" prefWidth="150.0" text="Circular ID" />
+            <TableColumn fx:id="postTitleCol" prefWidth="250.0" text="Post Title" />
+            <TableColumn fx:id="departmentCol" prefWidth="160.0" text="Department" />
         </columns>
     </TableView>
+
+    <!-- Show Total Applicant Button -->
+    <Button layoutX="420.0" layoutY="305.0" onAction="#showTotalApplicantButtonOA" prefHeight="27.0" prefWidth="160.0" text="Show Total Applicant">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+
+    <!-- Total Applicant Count Label -->
+    <Label layoutX="20.0" layoutY="310.0" text="Total Applicants:" />
+    <Label fx:id="totalApplicantLabel" layoutX="150.0" layoutY="310.0" />
 
     <!-- Back to Dashboard Button -->
     <Button layoutX="20.0" layoutY="343.0" onAction="#backToDashboardButtonOA" prefHeight="27.0" prefWidth="150.0" text="Back to Dashboard">

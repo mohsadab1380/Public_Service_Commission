@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Tahmid_2430835.Auditor.AuditorDashboardViewController">
+<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Tahmid_2430835.Auditor.AuditorDashboardViewController">
     <children>
         <Label layoutX="186.0" layoutY="25.0" text="Auditor Dashboard">
             <font>
@@ -14,10 +14,10 @@
         </Label>
         <Button layoutX="56.0" layoutY="100.0" mnemonicParsing="false" onAction="#CreateJobCircularButtonOA" prefHeight="35.0" prefWidth="211.0" text="Create Job Circular" />
         <Button layoutX="337.0" layoutY="100.0" mnemonicParsing="false" onAction="#DiscrepancyReportButtonOA" prefHeight="35.0" prefWidth="211.0" text="Discrepancy Report" />
-        <Button layoutX="54.0" layoutY="312.0" mnemonicParsing="false" onAction="#GlobalDiscrepancySummaryButtonOA" prefHeight="35.0" prefWidth="211.0" text="Global Discrepancy Summary" />
+        <Button layoutX="54.0" layoutY="312.0" mnemonicParsing="false" onAction="#applicantCountPerCircularButtonOA" prefHeight="35.0" prefWidth="211.0" text="Applicant Count Per Circular" />
         <Button layoutX="335.0" layoutY="312.0" mnemonicParsing="false" onAction="#ExportDiscrepancyReportButtonOA" prefHeight="35.0" prefWidth="211.0" text="Discrepancy Summary" />
         <Button layoutX="54.0" layoutY="245.0" mnemonicParsing="false" onAction="#ViewActivityLogButtonOA" prefHeight="35.0" prefWidth="211.0" text="View Activity Log" />
-        <Button layoutX="335.0" layoutY="245.0" mnemonicParsing="false" onAction="#EditApplicantButtonOA" prefHeight="35.0" prefWidth="211.0" text="Edit Applicant" />
+        <Button layoutX="335.0" layoutY="245.0" mnemonicParsing="false" onAction="#EditApplicantButtonOA" prefHeight="35.0" prefWidth="211.0" text="View Applicant Details" />
         <Button layoutX="54.0" layoutY="171.0" mnemonicParsing="false" onAction="#ViewApplicantsByCircularButtonOA" prefHeight="35.0" prefWidth="211.0" text="View Applicants by Circular" />
         <Button layoutX="335.0" layoutY="171.0" mnemonicParsing="false" onAction="#DeleteApplicantButtonOA" prefHeight="35.0" prefWidth="211.0" text="Delete Applicant" />
     </children>

@@ -19,16 +19,20 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.time.LocalDate;
 
-public class ViewAllJobCirculars
+public class ViewRejectedCirculars
 {
     @javafx.fxml.FXML
     private TableColumn<JobCircular, Integer> circularIdCol;
     @javafx.fxml.FXML
     private TableColumn<JobCircular, String> departmentCol;
     @javafx.fxml.FXML
-    private TableColumn<JobCircular, String> statusCol;
+    private TableView<JobCircular> rejectedCircularsTableView;
     @javafx.fxml.FXML
-    private TableView<JobCircular> allCircularsTableView;
+    private TableColumn<JobCircular, String> rejectedByCol;
+    @javafx.fxml.FXML
+    private TableColumn<JobCircular, String> rejectionReasonCol;
+    @javafx.fxml.FXML
+    private TableColumn<JobCircular, LocalDate> rejectionDateCol;
     @javafx.fxml.FXML
     private DatePicker dateDP;
     @javafx.fxml.FXML
@@ -47,13 +51,15 @@ public class ViewAllJobCirculars
         circularIdCol.setCellValueFactory(new PropertyValueFactory<>("circularId"));
         postTitleCol.setCellValueFactory(new PropertyValueFactory<>("postTitle"));
         departmentCol.setCellValueFactory(new PropertyValueFactory<>("department"));
-        statusCol.setCellValueFactory(new PropertyValueFactory<>("status"));
         submissionDateCol.setCellValueFactory(new PropertyValueFactory<>("submissionDate"));
+        rejectedByCol.setCellValueFactory(new PropertyValueFactory<>("rejectedBy"));
+        rejectionReasonCol.setCellValueFactory(new PropertyValueFactory<>("rejectionReason"));
+        rejectionDateCol.setCellValueFactory(new PropertyValueFactory<>("rejectionDate"));
     }
 
     @javafx.fxml.FXML
     public void loadButtonOA(ActionEvent actionEvent) {
-        allCircularsTableView.getItems().clear();
+        rejectedCircularsTableView.getItems().clear();
         jobCircularList.clear();
 
         try {
@@ -64,8 +70,8 @@ public class ViewAllJobCirculars
                 try {
                     JobCircular j = (JobCircular) ois.readObject();
                     jobCircularList.add(j);
-                    if (j.getSubmissionDate().equals(dateDP.getValue())) {
-                        allCircularsTableView.getItems().add(j);
+                    if (j.getSubmissionDate().equals(dateDP.getValue()) && j.getStatus().equals("Rejected")) {
+                        rejectedCircularsTableView.getItems().add(j);
                     }
                 } catch (EOFException e) {
                     ois.close();
@@ -73,7 +79,7 @@ public class ViewAllJobCirculars
                 }
             }
 
-            messageLabel.setText("Circulars loaded successfully");
+            messageLabel.setText("Rejected circulars loaded successfully");
 
         } catch (Exception e) {
             //

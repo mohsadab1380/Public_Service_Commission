@@ -12,12 +12,12 @@
                 <Font name="System Bold" size="24.0" />
             </font>
         </Label>
-        <Button layoutX="56.0" layoutY="100.0" mnemonicParsing="false" onAction="#PendingJobCircularButtonOA" prefHeight="35.0" prefWidth="211.0" text="Pending Job Circular" />
+        <Button layoutX="56.0" layoutY="100.0" mnemonicParsing="false" onAction="#PendingJobCircularButtonOA" prefHeight="35.0" prefWidth="211.0" text="Approve Job Circular" />
         <Button layoutX="337.0" layoutY="100.0" mnemonicParsing="false" onAction="#RecruitmentSummaryReportButtonOA" prefHeight="35.0" prefWidth="211.0" text="Recruitment Summary Report" />
         <Button layoutX="54.0" layoutY="312.0" mnemonicParsing="false" onAction="#DepartmentWiseCircularReportButtonOA" prefHeight="55.0" prefWidth="211.0" text="Department-wise Circular Report" textAlignment="CENTER" wrapText="true" />
         <Button layoutX="335.0" layoutY="312.0" mnemonicParsing="false" onAction="#RejectedCircularsButtonOA" prefHeight="35.0" prefWidth="211.0" text="Rejected Circulars" />
         <Button layoutX="54.0" layoutY="245.0" mnemonicParsing="false" onAction="#ApprovedCircularsButtonOA" prefHeight="35.0" prefWidth="211.0" text="Approved Circulars" />
-        <Button layoutX="335.0" layoutY="245.0" mnemonicParsing="false" onAction="#EditCircularButtonOA" prefHeight="35.0" prefWidth="211.0" text="Edit Circular" />
+        <Button layoutX="335.0" layoutY="245.0" mnemonicParsing="false" onAction="#EditCircularButtonOA" prefHeight="35.0" prefWidth="211.0" text="Reject Job Circular" />
         <Button layoutX="54.0" layoutY="171.0" mnemonicParsing="false" onAction="#ViewAllJobCircularsButtonOA" prefHeight="35.0" prefWidth="211.0" text="View All Job Circulars" />
         <Button layoutX="335.0" layoutY="171.0" mnemonicParsing="false" onAction="#DeleteCircularButtonOA" prefHeight="35.0" prefWidth="211.0" text="Delete Circular" />
     </children>

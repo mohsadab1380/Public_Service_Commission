@@ -13,9 +13,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
-import java.io.*;
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
-public class DiscrepancyReport
+public class ViewApplicantsByCircular
 {
     @javafx.fxml.FXML
     private TableColumn<Applicant, String> phoneCol;
@@ -32,7 +35,7 @@ public class DiscrepancyReport
     @javafx.fxml.FXML
     private TableColumn<Applicant, Integer> applicantIdCol;
     @javafx.fxml.FXML
-    private TextField circularIdTF;
+    private TextField circularIDTF;
     @javafx.fxml.FXML
     private TableColumn<Applicant, String> emailCol;
     @javafx.fxml.FXML
@@ -54,11 +57,11 @@ public class DiscrepancyReport
     }
 
     @javafx.fxml.FXML
-    public void loadApplicantsButtonOA(ActionEvent actionEvent) {
+    public void loadButtonOA(ActionEvent actionEvent) {
         applicantsTableView.getItems().clear();
         applicantList.clear();
 
-        int circularId = Integer.parseInt(circularIdTF.getText());
+        int circularId = Integer.parseInt(circularIDTF.getText());
 
         try {
             FileInputStream fis = new FileInputStream("Applicant.bin");
@@ -78,33 +81,9 @@ public class DiscrepancyReport
             }
 
             messageLabel.setText("Applicants loaded");
+
         } catch (Exception e) {
             //
-        }
-    }
-
-    @javafx.fxml.FXML
-    public void markDiscrepancyButtonOA(ActionEvent actionEvent) {
-        Applicant selectedApplicant = applicantsTableView.getSelectionModel().getSelectedItem();
-
-        if (selectedApplicant != null) {
-            selectedApplicant.setStatus("Discrepancy");
-
-            try {
-                FileOutputStream fos = new FileOutputStream("Applicant.bin");
-                ObjectOutputStream oos = new ObjectOutputStream(fos);
-
-                for (Applicant a : applicantList) {
-                    oos.writeObject(a);
-                }
-                oos.close();
-
-                applicantsTableView.refresh();
-                messageLabel.setText("Marked as discrepancy");
-
-            } catch (Exception e) {
-                //
-            }
         }
     }
 

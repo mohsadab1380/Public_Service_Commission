@@ -1,5 +1,5 @@
-package cen413.public_service_commission.Tahmid_2430835.Chairman;
-
+package cen413.public_service_commission.Tahmid_2430835.Auditor;
+import cen413.public_service_commission.Tahmid_2430835.Applicant;
 import cen413.public_service_commission.Tahmid_2430835.JobCircular;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,33 +12,32 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.time.LocalDate;
 
-public class ViewAllJobCirculars
+public class ApplicantCountPerCircular
 {
     @javafx.fxml.FXML
     private TableColumn<JobCircular, Integer> circularIdCol;
     @javafx.fxml.FXML
     private TableColumn<JobCircular, String> departmentCol;
     @javafx.fxml.FXML
-    private TableColumn<JobCircular, String> statusCol;
+    private TableView<JobCircular> circularsTableView;
     @javafx.fxml.FXML
-    private TableView<JobCircular> allCircularsTableView;
+    private DatePicker toDateDP;
     @javafx.fxml.FXML
-    private DatePicker dateDP;
+    private DatePicker fromDateDP;
     @javafx.fxml.FXML
-    private TableColumn<JobCircular, LocalDate> submissionDateCol;
+    private Label totalApplicantLabel;
+    @javafx.fxml.FXML
+    private AnchorPane mainPane;
     @javafx.fxml.FXML
     private Label messageLabel;
     @javafx.fxml.FXML
     private TableColumn<JobCircular, String> postTitleCol;
-    @javafx.fxml.FXML
-    private AnchorPane mainPane;
 
     ObservableList<JobCircular> jobCircularList = FXCollections.observableArrayList();
 
@@ -47,14 +46,16 @@ public class ViewAllJobCirculars
         circularIdCol.setCellValueFactory(new PropertyValueFactory<>("circularId"));
         postTitleCol.setCellValueFactory(new PropertyValueFactory<>("postTitle"));
         departmentCol.setCellValueFactory(new PropertyValueFactory<>("department"));
-        statusCol.setCellValueFactory(new PropertyValueFactory<>("status"));
-        submissionDateCol.setCellValueFactory(new PropertyValueFactory<>("submissionDate"));
     }
 
     @javafx.fxml.FXML
     public void loadButtonOA(ActionEvent actionEvent) {
-        allCircularsTableView.getItems().clear();
+        circularsTableView.getItems().clear();
         jobCircularList.clear();
+        totalApplicantLabel.setText("");
+
+        LocalDate fromDate = fromDateDP.getValue();
+        LocalDate toDate = toDateDP.getValue();
 
         try {
             FileInputStream fis = new FileInputStream("JobCircular.bin");
@@ -63,9 +64,12 @@ public class ViewAllJobCirculars
             while (true) {
                 try {
                     JobCircular j = (JobCircular) ois.readObject();
-                    jobCircularList.add(j);
-                    if (j.getSubmissionDate().equals(dateDP.getValue())) {
-                        allCircularsTableView.getItems().add(j);
+                    LocalDate submissionDate = j.getSubmissionDate();
+
+                    if ((submissionDate.isEqual(fromDate) || submissionDate.isAfter(fromDate)) &&
+                            (submissionDate.isEqual(toDate) || submissionDate.isBefore(toDate))) {
+                        jobCircularList.add(j);
+                        circularsTableView.getItems().add(j);
                     }
                 } catch (EOFException e) {
                     ois.close();
@@ -74,6 +78,39 @@ public class ViewAllJobCirculars
             }
 
             messageLabel.setText("Circulars loaded successfully");
+            messageLabel.setStyle("-fx-text-fill: #006400;");
+
+        } catch (Exception e) {
+            //
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void showTotalApplicantButtonOA(ActionEvent actionEvent) {
+
+        JobCircular selectedCircular = circularsTableView.getSelectionModel().getSelectedItem();
+
+        int circularId = selectedCircular.getCircularId();
+        int totalApplicants = 0;
+
+        try {
+            FileInputStream fis = new FileInputStream("Applicant.bin");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            while (true) {
+                try {
+                    Applicant a = (Applicant) ois.readObject();
+                    if (a.getCircularId() == circularId) {
+                        totalApplicants++;
+                    }
+                } catch (EOFException e) {
+                    ois.close();
+                    break;
+                }
+            }
+
+            totalApplicantLabel.setText(Integer.toString(totalApplicants));
+            messageLabel.setText("Total applicants loaded successfully");
 
         } catch (Exception e) {
             //
@@ -83,7 +120,7 @@ public class ViewAllJobCirculars
     @javafx.fxml.FXML
     public void backToDashboardButtonOA(ActionEvent actionEvent) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cen413/public_service_commission/Tahmid_2430835/Chairman/0ChairmanDashboardView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cen413/public_service_commission/Tahmid_2430835/Auditor/0AuditorDashboardView.fxml"));
         Node node = fxmlLoader.load();
         mainPane.getChildren().setAll(node);
 

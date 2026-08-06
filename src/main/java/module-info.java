@@ -1,6 +1,7 @@
 module cen413.public_service_commission {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
     // Open the package containing your controller
     opens cen413.public_service_commission.Tahmid_2430835.Auditor to javafx.fxml;
@@ -11,4 +12,6 @@ module cen413.public_service_commission {
 
     opens cen413.public_service_commission to javafx.fxml;
     exports cen413.public_service_commission;
+    exports cen413.public_service_commission.Nahian_Anjum_Rahy;
+    opens cen413.public_service_commission.Nahian_Anjum_Rahy to javafx.fxml;
 }

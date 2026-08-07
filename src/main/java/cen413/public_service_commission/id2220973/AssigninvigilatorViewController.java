@@ -6,10 +6,11 @@ import javafx.scene.control.TextField;
 public class AssigninvigilatorViewController
 {
     @javafx.fxml.FXML
-    private TextField examHallTF;
+    private TextField<Headofcentre,String> examHallTF;
 
     @javafx.fxml.FXML
     public void initialize() {
+        examHallTF.getText()
     }
 
     @javafx.fxml.FXML

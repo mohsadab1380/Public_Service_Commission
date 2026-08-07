@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.HrscheduleexamViewController">
+<AnchorPane prefHeight="633.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.HrscheduleexamViewController">
    <children>
-      <TextField fx:id="examDateTF" layoutX="211.0" layoutY="62.0" />
-      <Text layoutX="104.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Date :" />
-      <TextField fx:id="examVenueTF" layoutX="211.0" layoutY="122.0" />
-      <Text layoutX="104.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Venue :" />
-      <TextField fx:id="examSessionTF" layoutX="211.0" layoutY="187.0" />
-      <Text layoutX="104.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Session  :" />
-      <Button layoutX="248.0" layoutY="275.0" mnemonicParsing="false" onAction="#publishScheduleButtonOA" text="Publish Schedule" />
+      <Text layoutX="41.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Date :" />
+      <Text layoutX="37.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Venue :" />
+      <Text layoutX="41.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Session  :" />
+      <Button layoutX="206.0" layoutY="529.0" mnemonicParsing="false" onAction="#publishScheduleButtonOA" text="Publish Schedule" />
+      <Button layoutX="233.0" layoutY="14.0" mnemonicParsing="false" onAction="#scheduleExaminationButtonOA" text="Schedule Examination" />
+      <DatePicker fx:id="examDateDP" layoutX="137.0" layoutY="62.0" />
+      <ComboBox fx:id="examVenueCB" layoutX="144.0" layoutY="101.0" prefWidth="150.0" />
+      <Text layoutX="36.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Center :" />
+      <ComboBox fx:id="examCenterCB" layoutX="144.0" layoutY="140.0" prefWidth="150.0" />
+      <ComboBox fx:id="examSessionCB" layoutX="144.0" layoutY="186.0" prefWidth="150.0" />
+      <Button layoutX="194.0" layoutY="262.0" mnemonicParsing="false" onAction="#verifyAndProcessScheduleButtonOA" text="Verify &amp; Process Schedule" />
+      <Label fx:id="checkingCompletenessOfSchedulingInfoLabel" layoutX="166.0" layoutY="317.0" text="Checking completeness of scheduling info" />
+      <Label fx:id="verifyingVenueAvailabityAndScheduleConflictsLabel" layoutX="166.0" layoutY="351.0" text="Verifying venue availability &amp; schedule conflicts" />
+      <Label fx:id="processingExaminationScheduleDataLabel" layoutX="166.0" layoutY="387.0" text="Processing examination scheduling data" />
+      <TextArea fx:id="examinationScheduleDisplayViewTA" layoutX="178.0" layoutY="411.0" prefHeight="101.0" prefWidth="200.0" text="Examination Schedule Display View" />
+      <Label fx:id="publicationConfirmationAlertLabel" layoutX="182.0" layoutY="575.0" text="Publication Confirmation Alert" />
    </children>
 </AnchorPane>

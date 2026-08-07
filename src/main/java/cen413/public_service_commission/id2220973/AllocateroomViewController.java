@@ -6,10 +6,12 @@ import javafx.scene.control.TextField;
 public class AllocateroomViewController
 {
     @javafx.fxml.FXML
-    private TextField examSessionTF;
+    private TextField< Headofcentre, String> examSessionTF;
 
     @javafx.fxml.FXML
     public void initialize() {
+
+
     }
 
     @javafx.fxml.FXML

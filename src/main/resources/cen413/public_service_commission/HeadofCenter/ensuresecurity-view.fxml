@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.Headofcentre">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.EnsuresecurityViewController">
    <children>
       <TextField fx:id="examInformationsTF" layoutX="226.0" layoutY="80.0" />
       <Text layoutX="91.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Informations :" />

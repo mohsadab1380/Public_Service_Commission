@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.HrgenerateViewController">
+<AnchorPane prefHeight="559.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.HrgenerateViewController">
    <children>
-      <TextField fx:id="reportPeriodTF" layoutX="219.0" layoutY="75.0" />
-      <Text layoutX="93.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Period :" />
-      <Button layoutX="248.0" layoutY="187.0" mnemonicParsing="false" onAction="#exportReportButtonOA" text="Export Report" />
+      <Text layoutX="23.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Period :" />
+      <Button layoutX="98.0" layoutY="492.0" mnemonicParsing="false" onAction="#exportReportButtonOA" text="Export Report" />
+      <Button layoutX="248.0" layoutY="14.0" mnemonicParsing="false" onAction="#recruitmentReportsButtonOA" text="Recruitment Reports" />
+      <ComboBox fx:id="reportPeriodCB" layoutX="143.0" layoutY="71.0" prefWidth="150.0" />
+      <Text layoutX="23.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department Name :" />
+      <ComboBox fx:id="departmentNameCB" layoutX="143.0" layoutY="123.0" prefWidth="150.0" />
+      <Button layoutX="231.0" layoutY="165.0" mnemonicParsing="false" onAction="#generateAndProcessReportButtonOA" text="Generate &amp; Process Report" />
+      <Label fx:id="checkingReportParametersLabel" layoutX="204.0" layoutY="210.0" text="Checking report parameters" />
+      <Label fx:id="verifyingRecruitmentRecordsForSelectedPeriodLabel" layoutX="204.0" layoutY="239.0" text="Verifying recruitment records for selected period" />
+      <Label fx:id="processingRecruitmentStatisticsLabel" layoutX="204.0" layoutY="278.0" text="Processing recruitment statistics" />
+      <TextArea fx:id="recruitmentReportDisplayViewTA" layoutX="193.0" layoutY="313.0" prefHeight="130.0" prefWidth="200.0" text="Recruitment Report Display View" />
+      <Label fx:id="exportConfirmationAlertLabel" layoutX="333.0" layoutY="496.0" text="Export Confirmation Alert" />
    </children>
 </AnchorPane>

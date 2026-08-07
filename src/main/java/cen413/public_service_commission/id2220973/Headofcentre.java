@@ -5,6 +5,8 @@ public class Headofcentre {
     private int userID;
     private int centerID;
     private int phone;
+    @javafx.fxml.FXML
+    private TextField incidentDetailsTF;
 
     public Headofcentre(int hocID, int userID, int centerID, int phone) {
         this.hocID = hocID;
@@ -53,5 +55,17 @@ public class Headofcentre {
                 ", centerID=" + centerID +
                 ", phone=" + phone +
                 '}';
+    }
+
+    @Deprecated
+    public void confirmAllocationButtonOA(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void finalizeAssignmentButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void submitIncidentReportButtonOA(ActionEvent actionEvent) {
     }
 }

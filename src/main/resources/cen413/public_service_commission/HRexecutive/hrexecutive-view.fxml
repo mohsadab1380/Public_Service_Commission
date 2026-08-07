@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane fx:id="postNameTF" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.HRexecutive">
+<AnchorPane fx:id="postNameTF" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.HRexecutiveViewController">
    <children>
       <TextField fx:id="postNameTF" layoutX="219.0" layoutY="55.0" />
       <Text layoutX="103.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Post Name :" />

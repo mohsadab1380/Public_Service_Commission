@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="14.0" style="-fx-background-color: #f2f5f9;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="user_2411699_controller.LoginController">
+<VBox alignment="CENTER" spacing="14.0" style="-fx-background-color: #f2f5f9;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User_2411699_Controller.LoginController">
     <padding>
         <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
     </padding>
@@ -29,8 +29,11 @@
 
         <HBox spacing="10.0">
             <Button defaultButton="true" onAction="#onLoginClick" text="Log in" />
+            <Button onAction="#onApplicantClick" text="Register as Applicant" />
         </HBox>
 
         <Label fx:id="messageLabel" style="-fx-text-fill: #b00020;" wrapText="true" />
     </VBox>
+
+    <Label style="-fx-text-fill: #6b7280;" text="Accountant: 5555 / Account2026          Examiner: 6666 / Examiner2026" />
 </VBox>

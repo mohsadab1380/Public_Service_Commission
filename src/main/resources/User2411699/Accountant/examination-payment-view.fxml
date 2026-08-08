@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user_2411699_controller.ExaminationPaymentsController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Button mnemonicParsing="false" onAction="#OnClickDashboard" text="Dashboad" textFill="#2040bc" />
+
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Examination Payments" />
+   <AnchorPane prefHeight="120.0" prefWidth="541.0">
+      <children>
+         <Label layoutX="25.0" layoutY="12.0" text="Request Id:" />
+         <Label layoutX="263.0" layoutY="12.0" text="Amount:" />
+         <Label layoutX="25.0" layoutY="37.0" text="Examination Type:" />
+         <Label layoutX="263.0" layoutY="37.0" text="Payment Status:" />
+         <Button layoutX="89.0" layoutY="80.0" mnemonicParsing="false" onAction="#onAddPaymentReq" prefHeight="25.0" prefWidth="263.0" text="Add to payment request" />
+         <RadioButton fx:id="paidRadioButton" layoutX="362.0" layoutY="37.0" mnemonicParsing="false" text="Paid">
+            <toggleGroup>
+               <ToggleGroup fx:id="PaymentStatus" />
+            </toggleGroup>
+         </RadioButton>
+         <RadioButton fx:id="UnpaidRadioButton" layoutX="415.0" layoutY="37.0" mnemonicParsing="false" text="Unpaid" toggleGroup="$PaymentStatus" />
+         <TextField fx:id="requestIdTextField" layoutX="92.0" layoutY="8.0" prefHeight="17.0" prefWidth="129.0" />
+         <TextField fx:id="amountTextField" layoutX="318.0" layoutY="8.0" prefHeight="25.0" prefWidth="129.0" />
+         <ComboBox fx:id="examinationTypeComboBox" layoutX="130.0" layoutY="41.0" prefHeight="0.0" prefWidth="100.0" />
+      </children>
+   </AnchorPane>
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Button onAction="#onLoadClick" text="Load Payment Requests" />
+        <Button onAction="#onVerifyClick" text="Verify Payment Information" />
+        <Button onAction="#onProcessClick" text="Process Examination Payment" />
+    </HBox>
+
+    <TableView fx:id="requestTable" prefHeight="220.0">
+        <columns>
+            <TableColumn fx:id="requestIdColumn" prefWidth="130.66666221618652" text="Request ID" />
+            <TableColumn fx:id="examNameColumn" prefWidth="156.6666717529297" text="Examination Type" />
+            <TableColumn fx:id="amountColumn" prefWidth="128.6666259765625" text="Amount" />
+            <TableColumn fx:id="paymentStatusColumn" prefWidth="120.0" text="Payment Status" />
+        </columns>
+    </TableView>
+    <Label fx:id="statusLabel" prefHeight="17.0" prefWidth="63.0" style="-fx-text-fill: #1b7f4b; -fx-font-weight: bold;" text="Status" />
+</VBox>

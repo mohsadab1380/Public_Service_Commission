@@ -1,49 +1,106 @@
 package user_2411699_controller;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import util.SceneSwitcher;
 
 public class ExaminerDashboardController {
-    @javafx.fxml.FXML
+
+    @FXML
     private Label userLabel;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label assignedSummaryLabel;
-    @javafx.fxml.FXML
+
+    @FXML
     private BorderPane dashboardPane;
 
-    @javafx.fxml.FXML
-    public void onCandidateVerificationClick() {
+    @FXML
+    public void initialize() {
+        userLabel.setText("Welcome, Examiner");
+        assignedSummaryLabel.setText("Assigned Scripts: null");
     }
 
-    @javafx.fxml.FXML
-    public void onReevaluationClick() {
+    @FXML
+    public void onCandidateVerificationClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/User2411699/Examiner/candidate-verification-view.fxml",
+                "Candidate Verification"
+        );
     }
 
-    @javafx.fxml.FXML
-    public void onResultSubmissionClick() {
+    @FXML
+    public void onReevaluationClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/User2411699/Examiner/reevaluation-view.fxml",
+                "Re-evaluation"
+        );
     }
 
-    @javafx.fxml.FXML
-    public void onAssignedScriptsClick() {
+    @FXML
+    public void onResultSubmissionClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/User2411699/Examiner/result-submission-view.fxml",
+                "Result Submission"
+        );
     }
 
-    @javafx.fxml.FXML
-    public void onMalpracticeClick() {
+    @FXML
+    public void onAssignedScriptsClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/User2411699/Examiner/assigned-script-view.fxml",
+                "Assigned Scripts"
+        );
     }
 
-    @javafx.fxml.FXML
-    public void onRemarksClick() {
+    @FXML
+    public void onMalpracticeClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/User2411699/Examiner/malpractice-view.fxml",
+                "Malpractice Reports"
+        );
     }
 
-    @javafx.fxml.FXML
-    public void onEvaluationReportsClick() {
+    @FXML
+    public void onRemarksClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/User2411699/Examiner/remarks-view.fxml",
+                "Remarks"
+        );
     }
 
-    @javafx.fxml.FXML
-    public void onProgressReportClick() {
+    @FXML
+    public void onEvaluationReportsClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/User2411699/Examiner/reevaluation-view.fxml",
+                "Evaluation Reports"
+        );
     }
 
-    @javafx.fxml.FXML
-    public void onLogOutClick() {
+    @FXML
+    public void onProgressReportClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/User2411699/Examiner/progress-report-view.fxml",
+                "Progress Report"
+        );
+    }
+
+    @FXML
+    public void onLogOutClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/User2411699/login-view.fxml",
+                "Login"
+        );
     }
 }

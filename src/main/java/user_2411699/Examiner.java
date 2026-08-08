@@ -1,11 +1,10 @@
-package user_2411699;
+package User_2411699;
 
-import cen413.public_service_commission.User;
 
 import java.time.LocalDate;
 
 public class Examiner extends User {
-    private String designation,department,subject;
+    private String designation, department, subject;
     private LocalDate dateOfJoining;
 
     public Examiner(int id, String name, String gender, String userName, String pw, String address, String email, String phoneNum, LocalDate dob, String designation, String department, String subject, LocalDate dateOfJoining) {
@@ -14,6 +13,22 @@ public class Examiner extends User {
         this.department = department;
         this.subject = subject;
         this.dateOfJoining = dateOfJoining;
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public LocalDate getDateOfJoining() {
+        return dateOfJoining;
     }
 
     public void setDesignation(String designation) {
@@ -30,6 +45,17 @@ public class Examiner extends User {
 
     public void setDateOfJoining(LocalDate dateOfJoining) {
         this.dateOfJoining = dateOfJoining;
+    }
+
+    @Override
+    public String toString() {
+        return "Examiner{" +
+                "designation='" + designation + '\'' +
+                ", department='" + department + '\'' +
+                ", subject='" + subject + '\'' +
+                ", dateOfJoining=" + dateOfJoining +
+                ", id=" + id +
+                '}';
     }
 
     @Override

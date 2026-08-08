@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user_2411699_controller.PayrollManagementController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Button mnemonicParsing="false" onAction="#OnClockDashboard" text="Dashboard" />
+
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Payroll Management" />
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Label text="Payroll Period" />
+        <ComboBox fx:id="periodComboBox" prefWidth="180.0" />
+        <Button onAction="#onSearchClick" text="Load Employee Payroll" />
+        <Button onAction="#onVerifyClick" text="Verify Payroll Information" />
+        <Button onAction="#onProcessClick" text="Process Payroll" />
+    </HBox>
+
+    <TableView fx:id="payrollTable" prefHeight="230.0">
+        <columns>
+            <TableColumn fx:id="employeeIdColumn" prefWidth="128.66666221618652" text="Employee ID" />
+            <TableColumn fx:id="employeeNameColumn" prefWidth="134.00001525878906" text="Employee Name" />
+            <TableColumn fx:id="designationColumn" prefWidth="118.6666259765625" text="Designation" />
+            <TableColumn fx:id="netSalaryColumn" prefWidth="126.66671752929688" text="Salary" />
+            <TableColumn fx:id="processingStatusColumn" prefWidth="167.3333740234375" text="Status" />
+        </columns>
+    </TableView>
+    <Label fx:id="statusLabel" style="-fx-text-fill: #1b7f4b; -fx-font-weight: bold;" />
+</VBox>

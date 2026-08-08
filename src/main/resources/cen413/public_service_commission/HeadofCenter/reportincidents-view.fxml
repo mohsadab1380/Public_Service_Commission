@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.ReportincidentViewController">
+<AnchorPane prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.ReportincidentViewController">
    <children>
-      <TextField fx:id="incidentDetailsTF" layoutX="226.0" layoutY="70.0" />
-      <Text layoutX="127.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Incident Details :" />
-      <Button layoutX="249.0" layoutY="188.0" mnemonicParsing="false" onAction="#submitIncidentReportButtonOA" text="Submit Incident Report" />
+      <Text layoutX="26.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Incident Details :" />
+      <Button layoutX="26.0" layoutY="544.0" mnemonicParsing="false" onAction="#submitIncidentReportButtonOA" text="Submit Incident Report" />
+      <Button layoutX="230.0" layoutY="24.0" mnemonicParsing="false" onAction="#reportIncidentButtonOA" text="Report Incident" />
+      <ComboBox fx:id="incidentCB" layoutX="141.0" layoutY="70.0" prefWidth="150.0" />
+      <Button layoutX="230.0" layoutY="112.0" mnemonicParsing="false" onAction="#processReportIncidentButtonOA" text="Process Report Incident" />
+      <Label fx:id="checkingWhetherIncidentInformationIsCompleteLabel" layoutX="209.0" layoutY="171.0" text="Checking whether incident information is complete " />
+      <Label fx:id="verifyingExaminationSessionDetailsLabel" layoutX="200.0" layoutY="210.0" text=" Verifying examination session details " />
+      <Label fx:id="processingIncidentReportInformationLabel" layoutX="200.0" layoutY="246.0" text="Processing incident report information" />
+      <TextArea fx:id="displaysIncidentReportPreviewTA" layoutX="209.0" layoutY="275.0" prefHeight="139.0" prefWidth="200.0" text=" Displays incident report preview " />
+      <Label fx:id="submissionConfirmedAlertLabel" layoutX="251.0" layoutY="548.0" text="Submission Confirmination Alert " />
    </children>
 </AnchorPane>

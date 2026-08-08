@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.AllocateroomViewController">
+<AnchorPane prefHeight="555.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.AllocateroomViewController">
    <children>
-      <TextField fx:id="examSessionTF" layoutX="211.0" layoutY="60.0" />
-      <Text layoutX="89.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Session :" />
-      <Button layoutX="248.0" layoutY="175.0" mnemonicParsing="false" onAction="#confirmAllocationButtonOA" text=" Confirm Allocation" />
+      <Text layoutX="25.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Session :" />
+      <Button layoutX="42.0" layoutY="475.0" mnemonicParsing="false" onAction="#confirmAllocationButtonOA" text=" Confirm Allocation" />
+      <Button layoutX="234.0" layoutY="14.0" mnemonicParsing="false" onAction="#roomAllocationButtonOA" text="Room Allocation" />
+      <ComboBox fx:id="examSessionCB" layoutX="136.0" layoutY="73.0" prefWidth="150.0" />
+      <Button layoutX="227.0" layoutY="122.0" mnemonicParsing="false" onAction="#processRoomAllocationButtonOA" text="Process Room Allocation" />
+      <Label fx:id="checkingRoomCapacityInformationLabel" layoutX="183.0" layoutY="180.0" text="Checking room capacity information" />
+      <Label fx:id="verifyingRoomAvailabilityForTheSessionLabel" layoutX="183.0" layoutY="216.0" text="Verifying room availability for the session" />
+      <Label fx:id="processingCandidateAndRoomAllocationDataLabel" layoutX="183.0" layoutY="252.0" text="Processing candidate and room allocation data" />
+      <TextArea fx:id="roomAllocationListDisplayViewTA" layoutX="258.0" layoutY="270.0" prefHeight="200.0" prefWidth="200.0" text="Room Allocation List Display View" />
+      <Label fx:id="allocationConfirmationAlertLabel" layoutX="262.0" layoutY="492.0" text="Allocation Confirmation Alert" />
    </children>
 </AnchorPane>

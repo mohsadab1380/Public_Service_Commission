@@ -1,4 +1,4 @@
-package User_2411699_Controller;
+package user_2411699_controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

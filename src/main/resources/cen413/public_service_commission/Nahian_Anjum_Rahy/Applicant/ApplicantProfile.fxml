@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Nahian_Anjum_Rahy.ControllerClass.ApplicantProfileController">
+
+    <children>
+        <VBox prefHeight="650.0" prefWidth="900.0" spacing="10">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="50" prefWidth="900" spacing="20">
+                    <children>
+                        <Button fx:id="backButton" onAction="#handleBack" text="Back" />
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text=" My Profile" />
+                    </children>
+                </HBox>
+
+                <!-- Profile Progress -->
+                <HBox spacing="15">
+                    <Label text="Profile Completion:" />
+                    <ProgressBar fx:id="profileProgressBar" prefWidth="200" progress="0.85" />
+                    <Label fx:id="profileProgressLabel" text="85%" />
+                </HBox>
+
+                <TabPane>
+                    <tabs>
+                        <!-- Personal Info -->
+                        <Tab closable="false" text="Personal Info">
+                            <content>
+                                <GridPane hgap="10" style="-fx-padding: 15px;" vgap="8">
+                                    <children>
+                                        <Label text="Full Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                        <TextField fx:id="fullNameField" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                        <Label text="Email:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                                        <TextField fx:id="emailField" prefWidth="200" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                                        <Label text="NID:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                        <TextField fx:id="nidField" prefWidth="150" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                        <Label text="Date of Birth:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                        <DatePicker fx:id="dobPicker" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                                        <Label text="Phone:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                        <TextField fx:id="phoneField" prefWidth="150" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                        <Label text="District:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                        <ComboBox fx:id="districtComboBox" prefWidth="150" promptText="Select" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                                        <HBox spacing="10" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="3">
+                                            <Button fx:id="saveProfileButton" onAction="#handleSaveProfile" text=" Save Profile" />
+                                            <Button fx:id="resetProfileButton" onAction="#handleResetProfile" text=" Reset" />
+                                        </HBox>
+                                    </children>
+                           <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                                </GridPane>
+                            </content>
+                        </Tab>
+
+                        <!-- Education -->
+                        <Tab closable="false" text="Education">
+                            <content>
+                                <VBox spacing="10" style="-fx-padding: 15px;">
+                                    <GridPane hgap="10" style="-fx-background-color: #f5f5f5; -fx-padding: 10px;" vgap="8">
+                                        <children>
+                                            <Label text="Level:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                            <ComboBox fx:id="educationLevelComboBox" prefWidth="120" promptText="Select" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                            <Label text="Degree:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                                            <TextField fx:id="degreeField" prefWidth="150" promptText="Degree" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                                            <Label text="GPA:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                            <TextField fx:id="gpaField" prefWidth="80" promptText="3.95" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                            <Label text="Institution:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                            <TextField fx:id="institutionField" prefWidth="200" promptText="Institution" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                                            <HBox spacing="10" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="2">
+                                                <Button fx:id="addEducationButton" onAction="#handleAddEducation" text=" Add Education" />
+                                            </HBox>
+                                        </children>
+                              <columnConstraints>
+                                 <ColumnConstraints />
+                                 <ColumnConstraints />
+                                 <ColumnConstraints />
+                                 <ColumnConstraints />
+                              </columnConstraints>
+                              <rowConstraints>
+                                 <RowConstraints />
+                                 <RowConstraints />
+                                 <RowConstraints />
+                              </rowConstraints>
+                                    </GridPane>
+
+                                    <TableView fx:id="educationTableView" prefHeight="200" prefWidth="860">
+                                        <columns>
+                                            <TableColumn prefWidth="120" text="Level" />
+                                            <TableColumn prefWidth="180" text="Degree" />
+                                            <TableColumn prefWidth="100" text="GPA" />
+                                            <TableColumn prefWidth="200" text="Institution" />
+                                            <TableColumn prefWidth="100" text="Action" />
+                                        </columns>
+                                    </TableView>
+                                </VBox>
+                            </content>
+                        </Tab>
+
+                        <!-- Documents -->
+                        <Tab closable="false" text="Documents">
+                            <content>
+                                <VBox spacing="15" style="-fx-padding: 15px;">
+                                    <GridPane hgap="10" vgap="8">
+                                        <children>
+                                            <Label text="Photo:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                            <Button fx:id="uploadPhotoButton" onAction="#handleUploadPhoto" text=" Upload Photo" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                            <Label fx:id="photoStatusLabel" text="No photo" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+                                            <Label text="NID:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                            <Button fx:id="uploadNIDButton" onAction="#handleUploadNID" text=" Upload NID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                            <Label fx:id="nidStatusLabel" text="No NID" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                        </children>
+                              <columnConstraints>
+                                 <ColumnConstraints />
+                                 <ColumnConstraints />
+                                 <ColumnConstraints />
+                              </columnConstraints>
+                              <rowConstraints>
+                                 <RowConstraints />
+                                 <RowConstraints />
+                              </rowConstraints>
+                                    </GridPane>
+
+                                    <TableView fx:id="documentsTableView" prefHeight="200" prefWidth="860">
+                                        <columns>
+                                            <TableColumn prefWidth="180" text="Document" />
+                                            <TableColumn prefWidth="250" text="File Name" />
+                                            <TableColumn prefWidth="120" text="Status" />
+                                            <TableColumn prefWidth="100" text="Action" />
+                                        </columns>
+                                    </TableView>
+               
+                                     <Label fx:id="profileStatusLabel" prefHeight="0.0" prefWidth="33.0" text="Ready" />
+                                </VBox>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

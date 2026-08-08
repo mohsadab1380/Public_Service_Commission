@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User_2411699_Controller.TaxComplianceController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Button mnemonicParsing="false" onAction="#OnClickDashboard" text="Dashboard" />
+
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Tax and VAT Compliance" />
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Button onAction="#onLoadClick" text="Load Taxable Transactions" />
+        <Button onAction="#onCalculateClick" text="Calculate VAT and Tax" />
+        <Button onAction="#onSubmitClick" text="Submit Tax Payment" />
+    </HBox>
+
+    <TableView fx:id="taxTable" prefHeight="210.0">
+        <columns>
+            <TableColumn fx:id="transactionIdColumn" prefWidth="120.0" text="Transaction ID" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="220.0" text="Description" />
+            <TableColumn fx:id="taxableAmountColumn" prefWidth="130.0" text="Taxable Amount" />
+            <TableColumn fx:id="vatAmountColumn" prefWidth="120.0" text="VAT Amount" />
+            <TableColumn fx:id="taxAmountColumn" prefWidth="120.0" text="Tax Amount" />
+            <TableColumn fx:id="paymentStatusColumn" prefWidth="120.0" text="Payment Status" />
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Label text="VAT Rate (%)" />
+        <TextField fx:id="vatRateField" prefWidth="80.0" />
+        <Label text="Tax Rate (%)" />
+        <TextField fx:id="taxRateField" prefWidth="80.0" />
+    </HBox>
+    <Label fx:id="statusLabel" style="-fx-text-fill: #1b7f4b; -fx-font-weight: bold;" />
+</VBox>

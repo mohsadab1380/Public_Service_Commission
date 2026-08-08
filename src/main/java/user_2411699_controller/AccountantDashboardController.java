@@ -1,47 +1,100 @@
-package user_2411699_controller;
+package User_2411699_Controller;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import util.SceneSwitcher;
+
+import java.io.IOException;
 
 public class AccountantDashboardController {
-    @javafx.fxml.FXML
+
+    @FXML
     private Label userLabel;
-    @javafx.fxml.FXML
+
+    @FXML
     private BorderPane dashboardPane;
 
-    @javafx.fxml.FXML
-    public void onAuditSupportClick( ) {
+    @FXML
+    public void initialize() {
+        userLabel.setText("Welcome Accountant");
     }
 
-    @javafx.fxml.FXML
-    public void onTaxComplianceClick( ) {
+
+    @FXML
+    public void onFeeReconciliationClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/user2411699/Accountant/fee-verification-view.fxml",
+                "Fee Reconciliation");
     }
 
-    @javafx.fxml.FXML
-    public void onFinancialReportsClick( ) {
+    @FXML
+    public void onPayrollClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/user2411699/Accountant/payroll-management-view.fxml",
+                "Payroll Management");
     }
 
-    @javafx.fxml.FXML
-    public void onPayrollClick( ) {
+    @FXML
+    public void onSupplierPaymentClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/user2411699/Accountant/supplier-payment-view.fxml",
+                "Supplier Payment");
     }
 
-    @javafx.fxml.FXML
-    public void onFeeReconciliationClick( ) {
+    @FXML
+    public void onBudgetClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/user2411699/Accountant/budget-management-view.fxml",
+                "Budget Management");
     }
 
-    @javafx.fxml.FXML
-    public void onExaminationPaymentsClick( ) {
+    @FXML
+    public void onFinancialReportsClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/user2411699/Accountant/financial-report-view.fxml",
+                "Financial Report");
     }
 
-    @javafx.fxml.FXML
-    public void onLogOutClick( ) {
+    @FXML
+    public void onExaminationPaymentsClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/user2411699/Accountant/examination-payment-view.fxml",
+                "Examination Payment");
     }
 
-    @javafx.fxml.FXML
-    public void onSupplierPaymentClick( ) {
+    @FXML
+    public void onTaxComplianceClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/user2411699/Accountant/tax-compliance-view.fxml",
+                "Tax Vat Compliance");
     }
 
-    @javafx.fxml.FXML
-    public void onBudgetClick( ) {
+    @FXML
+    public void onAuditSupportClick(ActionEvent actionEvent) { SceneSwitcher.switchScene(
+            actionEvent,
+            "/user2411699/Accountant/audit-support-view.fxml",
+            "Audit Support");
+
+    }
+
+    @FXML
+    public void onLogOutClick(ActionEvent actionEvent) {
+
+        SceneSwitcher.switchScene(
+                actionEvent,
+                "/User2411699/login-view.fxml",
+                "Login"
+        );
     }
 }

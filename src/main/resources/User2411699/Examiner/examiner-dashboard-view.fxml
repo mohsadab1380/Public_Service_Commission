@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="dashboardPane" prefHeight="680.0" prefWidth="1080.0" style="-fx-background-color: #f2f5f9;"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="User_2411699_Controller.ExaminerDashboardController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12.0" style="-fx-background-color: #234e3b;">
+            <padding>
+                <Insets bottom="14.0" left="20.0" right="20.0" top="14.0"/>
+            </padding>
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Examiner Dashboard"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="userLabel" style="-fx-text-fill: white;"/>
+            <Button onAction="#onLogOutClick" text="Log Out"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox prefWidth="250.0" spacing="6.0" style="-fx-background-color: white;">
+            <padding>
+                <Insets bottom="16.0" left="14.0" right="14.0" top="16.0"/>
+            </padding>
+            <Label style="-fx-font-weight: bold;" text="Menu"/>
+            <Button maxWidth="Infinity" onAction="#onAssignedScriptsClick" text="Assigned Scripts"/>
+            <Button maxWidth="Infinity" onAction="#onResultSubmissionClick" text="Result Submission"/>
+            <Button maxWidth="Infinity" onAction="#onReevaluationClick" text="Re-evaluation Requests"/>
+            <Button maxWidth="Infinity" onAction="#onEvaluationReportsClick" text="Evaluation Reports"/>
+            <Button maxWidth="Infinity" onAction="#onRemarksClick" text="Remarks &amp; Recommendations"/>
+            <Button maxWidth="Infinity" onAction="#onCandidateVerificationClick" text="Pending Verification"/>
+            <Button maxWidth="Infinity" onAction="#onMalpracticeClick" text="Pending Cases"/>
+            <Button maxWidth="Infinity" onAction="#onProgressReportClick" text="Progress Report"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="CENTER" spacing="10.0">
+            <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Welcome to the Examiner Dashboard"/>
+            <Label fx:id="assignedSummaryLabel"/>
+            <Label text="Select a module from the menu to start working."/>
+        </VBox>
+    </center>
+</BorderPane>

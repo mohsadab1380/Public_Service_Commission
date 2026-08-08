@@ -36,7 +36,7 @@ public class LoginController {
 
             SceneSwitcher.switchScene(
                     actionEvent,
-                    "accountant-dashboard-view.fxml",
+                    "/user2411699/Accountant/accountant-dashboard-view.fxml",
                     "Accountant Dashboard"
             );
 
@@ -49,7 +49,7 @@ public class LoginController {
 
             SceneSwitcher.switchScene(
                     actionEvent,
-                    "examiner-dashboard-view.fxml",
+                    "/user2411699/Examiner/examiner-dashboard-view.fxml",
                     "Examiner Dashboard"
             );
         }

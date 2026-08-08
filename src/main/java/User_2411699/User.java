@@ -88,15 +88,11 @@ public abstract class User {
         }
 
         public static User verifyLogin(int givenId, String givenPw){
-            //
             User u =null;
-            //code to verify parameters with objects in files/database
-            //if found, u = the identified object
             return u;
         }
 
         public final void changePw(String oldPw, String newPw, String captcha){
-            //
         }
 
         public void logOut(){

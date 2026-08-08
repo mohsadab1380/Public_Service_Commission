@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User_2411699_Controller.AssignedScriptsController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Button mnemonicParsing="false" onAction="#OnClickDashboard" text="Dashboard" />
+
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Assigned Scripts" />
+
+    <TableView fx:id="scriptTable" prefHeight="200.0">
+        <columns>
+            <TableColumn fx:id="scriptIdColumn" prefWidth="110.0" text="Script ID" />
+            <TableColumn fx:id="candidateRollColumn" prefWidth="140.0" text="Candidate Roll No" />
+            <TableColumn fx:id="examNameColumn" prefWidth="200.0" text="Exam Name" />
+            <TableColumn fx:id="subjectColumn" prefWidth="170.0" text="Subject" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="candidateLabel" style="-fx-font-weight: bold;" />
+
+    <Label style="-fx-font-weight: bold;" text="Mark Entry Form" />
+    <TableView fx:id="markTable" editable="true" prefHeight="170.0">
+        <columns>
+            <TableColumn fx:id="questionNoColumn" prefWidth="120.0" text="Question No" />
+            <TableColumn fx:id="maxMarkColumn" prefWidth="120.0" text="Maximum Mark" />
+            <TableColumn fx:id="obtainedMarkColumn" prefWidth="160.0" text="Obtained Mark" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="totalLabel" style="-fx-font-weight: bold;" text="Running Total Marks: 0" />
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Button onAction="#onValidateClick" text="Validate Marks" />
+        <Button onAction="#onSaveClick" text="Save Evaluation" />
+    </HBox>
+
+    <Label fx:id="validationLabel" style="-fx-text-fill: #b00020;" wrapText="true" />
+    <Label fx:id="statusLabel" style="-fx-text-fill: #1b7f4b; -fx-font-weight: bold;" />
+</VBox>

@@ -5,6 +5,8 @@ module cen413.public_service_commission {
     requires javafx.base;
     requires javafx.graphics;
 
+
+    opens cen413.public_service_commission to javafx.fxml;
     exports cen413.public_service_commission;
 
     opens cen413.public_service_commission to javafx.fxml;

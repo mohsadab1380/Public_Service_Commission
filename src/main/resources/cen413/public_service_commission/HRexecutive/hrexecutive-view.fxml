@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="postNameTextF" prefHeight="708.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.HRexecutiveViewController">
+   <children>
+      <TextField fx:id="postNameTF" layoutX="202.0" layoutY="54.0" />
+      <Text layoutX="103.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Post Name :" />
+      <Text layoutX="103.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department :" />
+      <TextField fx:id="qualificationTF" layoutX="201.0" layoutY="147.0" />
+      <Text layoutX="98.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualification :" />
+      <Button layoutX="212.0" layoutY="500.0" mnemonicParsing="false" onAction="#confirmRecruitmentButtonOA" text="Confirm Recruitment" />
+      <Button layoutX="206.0" layoutY="14.0" mnemonicParsing="false" onAction="#startRecruittmentCycleButtonOA" text="Start Recruitment Cycle" />
+      <ComboBox fx:id="departmentCB" layoutX="201.0" layoutY="99.0" prefWidth="150.0" />
+      <Button layoutX="205.0" layoutY="260.0" mnemonicParsing="false" onAction="#verifyAndProcessDetailsButtonOA" text="Verify &amp; Process Details" />
+      <TextField fx:id="numberOfVacanciesTF" layoutX="202.0" layoutY="191.0" />
+      <Text layoutX="76.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Vacancies :" />
+      <Label layoutX="206.0" layoutY="316.0" />
+      <Label fx:id="checkingMandatoryFieldsLabel" layoutX="214.0" layoutY="308.0" text="Checking mandatory fields" />
+      <Label fx:id="checkingDuplicateRecruitmentLabel" layoutX="202.0" layoutY="334.0" text="Checking duplicate recruitment" />
+      <Label fx:id="creatingRecruitmentScheduleLabel" layoutX="197.0" layoutY="363.0" text="Creating recruitment schedule" />
+      <TextArea fx:id="recruitmentSummaryViewTA" layoutX="185.0" layoutY="397.0" prefHeight="74.0" prefWidth="200.0" text="Recruitment Summary View" />
+      <Label fx:id="confirmationMessageAlertLabel" layoutX="195.0" layoutY="600.0" text="Confirmation Message Alert" />
+   </children>
+</AnchorPane>

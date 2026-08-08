@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="563.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.ManagecenterViewController">
+   <children>
+      <TextField fx:id="centerCodeTF" layoutX="117.0" layoutY="62.0" />
+      <Text layoutX="23.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Center Code :" />
+      <Text layoutX="27.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Date :" />
+      <Button layoutX="51.0" layoutY="495.0" mnemonicParsing="false" onAction="#approveCentrePlanButtonOA" text=" Approve Centre Plan " />
+      <Button layoutX="226.0" layoutY="14.0" mnemonicParsing="false" onAction="#manageCentreOperationsButtonOA" text="Manage Centre Operations" />
+      <DatePicker fx:id="examDateDP" layoutX="104.0" layoutY="100.0" />
+      <Button layoutX="226.0" layoutY="139.0" mnemonicParsing="false" onAction="#checkAndRetrieveOperationsButtonOA" text="Check &amp; Retrieve Operations" />
+      <Label fx:id="checkingRequiredInputFieldsLabel" layoutX="168.0" layoutY="185.0" text="Checking required input fields" />
+      <Label fx:id="verifyingCentreRegistrationForSelectedExamLabel" layoutX="160.0" layoutY="211.0" text="Verifying centre registration for selected exam" />
+      <Label fx:id="retrievingCentreOperationalDataAndSchedulesLabel" layoutX="157.0" layoutY="243.0" text="Retrieving centre operational data &amp; schedules" />
+      <TextArea fx:id="centreOperationDetailsViewTA" layoutX="200.0" layoutY="269.0" prefHeight="125.0" prefWidth="200.0" text="Centre Operation Details View" />
+      <Label fx:id="centreConfirmationAlertLabel" layoutX="306.0" layoutY="486.0" text=" Centre Confirmation Alert" />
+   </children>
+</AnchorPane>

@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.HrviewjobViewController">
+<AnchorPane prefHeight="585.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.HrviewjobViewController">
    <children>
-      <TextField fx:id="recruitmentIdTF" layoutX="219.0" layoutY="70.0" />
-      <Text layoutX="112.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recruitment ID :" />
-      <TextField fx:id="postNameTF" layoutX="225.0" layoutY="125.0" />
-      <Text layoutX="112.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Post Name :" />
-      <Button layoutX="242.0" layoutY="216.0" mnemonicParsing="false" onAction="#proceedToScreeningButtonOA" text="Proceed to Screening" />
+      <TextField fx:id="recruitmentIdTF" layoutX="176.0" layoutY="56.0" />
+      <Text layoutX="58.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recruitment ID :" />
+      <Text layoutX="58.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Post Name :" />
+      <Button layoutX="186.0" layoutY="444.0" mnemonicParsing="false" onAction="#proceedToScreeningButtonOA" text="Proceed to Screening" />
+      <Button layoutX="219.0" layoutY="14.0" mnemonicParsing="false" onAction="#reviewApplicationsButtonOA" text="Review Applications" />
+      <ComboBox fx:id="postNameCB" layoutX="176.0" layoutY="104.0" prefWidth="150.0" />
+      <Button layoutX="176.0" layoutY="153.0" mnemonicParsing="false" onAction="#fetchAndVerifyApplicationsButtonOA" text="Fetch &amp; Verify Applications" />
+      <Label fx:id="recruitmentIdVerifyCheckLabel" layoutX="174.0" layoutY="201.0" text="Recruitment ID validity check" />
+      <Label fx:id="verifyingSubmittedApplicationsLabel" layoutX="174.0" layoutY="232.0" text="Verifying submitted applications" />
+      <Label fx:id="processingApplicantInformationLabel" layoutX="164.0" layoutY="261.0" text="Processing applicant information" />
+      <TextArea fx:id="applicantListViewTA" layoutX="156.0" layoutY="302.0" prefHeight="116.0" prefWidth="200.0" text="Applicant List View" />
+      <Label fx:id="screeningConfirmationAlertLabel" layoutX="174.0" layoutY="501.0" text="Screening Confirmation Alert" />
    </children>
 </AnchorPane>

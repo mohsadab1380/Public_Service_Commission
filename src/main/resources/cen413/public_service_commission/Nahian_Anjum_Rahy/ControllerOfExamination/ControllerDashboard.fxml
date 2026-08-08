@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Nahian_Anjum_Rahy.ControllerClass.ControllerOfExaminationController">
+        <children>
+            <VBox prefHeight="600.0" prefWidth="900.0" spacing="15">
+                <children>
+                    <!-- Header -->
+                    <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="900.0" spacing="20">
+                        <children>
+                            <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1a237e;" text=" Controller Dashboard" />
+                            <Label fx:id="welcomeLabel" style="-fx-font-size: 14px;" text="Welcome, Admin" />
+                        </children>
+                    </HBox>
+
+                    <!-- Stats Row -->
+                    <GridPane hgap="15" vgap="10">
+                        <children>
+                            <VBox alignment="CENTER" style="-fx-background-color: #e3f2fd; -fx-padding: 15px; -fx-border-radius: 5px;">
+                                <Label fx:id="totalSchedulesLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="00" />
+                                <Label text="Schedules" />
+                            </VBox>
+                            <VBox alignment="CENTER" style="-fx-background-color: #e8f5e9; -fx-padding: 15px; -fx-border-radius: 5px;" GridPane.columnIndex="1">
+                                <Label fx:id="totalCandidatesLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="000" />
+                                <Label text=" Candidates" />
+                            </VBox>
+                            <VBox alignment="CENTER" style="-fx-background-color: #fff3e0; -fx-padding: 15px; -fx-border-radius: 5px;" GridPane.columnIndex="2">
+                                <Label fx:id="pendingAppealsLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="0" />
+                                <Label text="Appeals" />
+                            </VBox>
+                            <VBox alignment="CENTER" style="-fx-background-color: #fce4ec; -fx-padding: 15px; -fx-border-radius: 5px;" GridPane.columnIndex="3">
+                                <Label fx:id="pendingVerificationsLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="00" />
+                                <Label text="Pending" />
+                            </VBox>
+                        </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+                    </GridPane>
+
+                    <!-- Menu Buttons -->
+                    <GridPane hgap="15" vgap="15">
+                        <children>
+                            <Button fx:id="examScheduleButton" onAction="#handleExamSchedule" prefHeight="60" prefWidth="180" text="Exam Schedule" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <Button fx:id="centerAllocationButton" onAction="#handleCenterAllocation" prefHeight="60" prefWidth="180" text=" Center Allocation" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            <Button fx:id="scriptEvaluationButton" onAction="#handleScriptEvaluation" prefHeight="60" prefWidth="180" text=" Script Evaluation" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                            <Button fx:id="approveMarksButton" onAction="#handleApproveMarks" prefHeight="60" prefWidth="180" text="Approve Marks" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                            <Button fx:id="publishResultsButton" onAction="#handlePublishResults" prefHeight="60" prefWidth="180" text="Publish Results" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <Button fx:id="manageAppealsButton" onAction="#handleManageAppeals" prefHeight="60" prefWidth="180" text="Manage Appeals" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <Button fx:id="verifyCandidatesButton" onAction="#handleVerifyCandidates" prefHeight="60" prefWidth="180" text=" Verify Candidates" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <Button fx:id="centerLogisticsButton" onAction="#handleCenterLogistics" prefHeight="60" prefWidth="180" text=" Center Logistics" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                    </GridPane>
+                      <Button fx:id="logoutButton" alignment="BOTTOM_LEFT" contentDisplay="CENTER" onAction="#handleLogout" style="-fx-background-color: #c62828; -fx-text-fill: white;" text=" Logout" />
+                </children>
+            </VBox>
+        </children>
+</AnchorPane>

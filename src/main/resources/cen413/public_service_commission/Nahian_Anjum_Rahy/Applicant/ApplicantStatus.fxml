@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Nahian_Anjum_Rahy.ControllerClass.ApplicantionStatusController">
+        <children>
+            <VBox prefHeight="650.0" prefWidth="900.0" spacing="10">
+                <children>
+                    <HBox alignment="CENTER_LEFT" prefHeight="50" prefWidth="900" spacing="20">
+                        <children>
+                            <Button fx:id="backButton" onAction="#handleBack" text="Back" />
+                            <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Application Status" />
+                        </children>
+                    </HBox>
+
+                    <TableView fx:id="applicationTableView" prefHeight="200" prefWidth="880">
+                        <columns>
+                            <TableColumn fx:id="applicationIdColumn" prefWidth="120" text="Application ID" />
+                            <TableColumn fx:id="circularNameColumn" prefWidth="200" text="Circular Name" />
+                            <TableColumn fx:id="postColumn" prefWidth="180" text="Post" />
+                            <TableColumn fx:id="applicationDateColumn" prefWidth="120" text="Applied Date" />
+                            <TableColumn fx:id="statusColumn" prefWidth="150" text="Status" />
+                        </columns>
+                    </TableView>
+
+                    <!-- Timeline -->
+                    <GridPane hgap="15" style="-fx-background-color: #e3f2fd; -fx-padding: 15px;">
+                        <children>
+                            <HBox alignment="CENTER" spacing="20" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="0">
+                                <VBox alignment="CENTER">
+                                    <ProgressIndicator prefHeight="40" prefWidth="40" progress="1.0" />
+                                    <Label text="✓ Submitted" />
+                                </VBox>
+                                <VBox alignment="CENTER">
+                                    <ProgressIndicator prefHeight="40" prefWidth="40" progress="1.0" />
+                                    <Label text="✓ Payment" />
+                                </VBox>
+                                <VBox alignment="CENTER">
+                                    <ProgressIndicator prefHeight="40" prefWidth="40" progress="1.0" />
+                                    <Label text="✓ Verified" />
+                                </VBox>
+                                <VBox alignment="CENTER">
+                                    <ProgressIndicator prefHeight="40" prefWidth="40" progress="0.5" />
+                                    <Label text="Evaluation" />
+                                </VBox>
+                                <VBox alignment="CENTER">
+                                    <ProgressIndicator prefHeight="40" prefWidth="40" progress="0.0" />
+                                    <Label text="Result" />
+                                </VBox>
+                            </HBox>
+
+                            <Label text="Current Status:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <Label fx:id="currentStatusLabel" text="Under Evaluation" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                            <Label text="Last Updated:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <Label fx:id="lastUpdatedLabel" text="20 June 2026" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                    </GridPane>
+
+                    <HBox spacing="15">
+                        <Button fx:id="refreshStatusButton" onAction="#handleRefreshStatus" text=" Refresh Status" />
+                        <Button fx:id="viewDetailsButton" onAction="#handleViewDetails" text=" View Details" />
+                    </HBox>
+
+                    <Label fx:id="statusLabel" text="Ready" />
+                </children>
+            </VBox>
+        </children>
+</AnchorPane>

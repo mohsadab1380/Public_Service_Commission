@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Nahian_Anjum_Rahy.ControllerClass.ApplicantController">
+        <children>
+            <VBox prefHeight="600.0" prefWidth="900.0" spacing="15">
+                <children>
+                    <!-- Header -->
+                    <HBox alignment="CENTER_LEFT" prefHeight="60" prefWidth="900" spacing="20">
+                        <children>
+                            <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1a237e;" text=" Applicant Dashboard" />
+                            <Label fx:id="welcomeLabel" text="Welcome, User" />
+                            <Label fx:id="applicantIdLabel" text="ID: APP-2026-001" />
+                        </children>
+                    </HBox>
+
+                    <!-- Stats -->
+                    <GridPane hgap="15" prefHeight="60.0" prefWidth="900.0" vgap="10">
+                        <children>
+                            <VBox alignment="CENTER" style="-fx-background-color: #e3f2fd; -fx-padding: 15px;">
+                                <Label fx:id="totalApplicationsLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="5" />
+                                <Label text=" Applications" />
+                            </VBox>
+                            <VBox alignment="CENTER" style="-fx-background-color: #e8f5e9; -fx-padding: 15px;" GridPane.columnIndex="1">
+                                <Label fx:id="pendingPaymentsLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="2" />
+                                <Label text="Payments" />
+                            </VBox>
+                            <VBox alignment="CENTER" style="-fx-background-color: #fff3e0; -fx-padding: 15px;" GridPane.columnIndex="2">
+                                <Label fx:id="admitCardsLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="3" />
+                                <Label text="Admit Cards" />
+                            </VBox>
+                            <VBox alignment="CENTER" style="-fx-background-color: #fce4ec; -fx-padding: 15px;" GridPane.columnIndex="3">
+                                <Label fx:id="appealsLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="1" />
+                                <Label text="Appeals" />
+                            </VBox>
+                        </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+                    </GridPane>
+
+                    <!-- Profile Progress -->
+                    <HBox alignment="CENTER_LEFT" spacing="15">
+                        <children>
+                            <Label text="Profile Completion:" />
+                            <ProgressBar fx:id="profileProgressBar" prefWidth="200" progress="0.85" />
+                            <Label fx:id="profileProgressLabel" text="85%" />
+                        </children>
+                    </HBox>
+
+                    <!-- Menu Buttons -->
+                    <GridPane hgap="15" vgap="15">
+                        <children>
+                            <Button fx:id="activeCircularsButton" onAction="#handleActiveCirculars" prefHeight="60" prefWidth="180" text="Active Circulars" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <Button fx:id="paymentButton" onAction="#handlePayment" prefHeight="60" prefWidth="180" text="Make Payment" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            <Button fx:id="admitCardButton" onAction="#handleAdmitCard" prefHeight="60" prefWidth="180" text=" Admit Card" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                            <Button fx:id="resultButton" onAction="#handleResult" prefHeight="60" prefWidth="180" text="Results" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                            <Button fx:id="appealButton" onAction="#handleAppeal" prefHeight="60" prefWidth="180" text="File Appeal" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <Button fx:id="statusButton" onAction="#handleApplicationStatus" prefHeight="60" prefWidth="180" text="Application Status" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <Button fx:id="profileButton" onAction="#handleProfile" prefHeight="60" prefWidth="180" text="Profile" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <Button fx:id="notificationsButton" onAction="#handleNotifications" prefHeight="60" prefWidth="180" text=" Notifications" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints maxWidth="180.0" minWidth="180.0" prefWidth="180.0" />
+                  <ColumnConstraints maxWidth="180.0" minWidth="180.0" prefWidth="180.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                    </GridPane>
+
+                    <!-- Logout -->
+                    <HBox alignment="CENTER_RIGHT" prefHeight="40" prefWidth="900">
+                        <children>
+                            <Button fx:id="logoutButton" onAction="#handleLogout" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #c62828; -fx-text-fill: white;" text="Logout" />
+                        </children>
+                    </HBox>
+                </children>
+            </VBox>
+        </children>
+</AnchorPane>

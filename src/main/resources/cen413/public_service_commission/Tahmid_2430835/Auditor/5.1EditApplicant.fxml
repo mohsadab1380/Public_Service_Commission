@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.Tahmid_2430835.Auditor.EditApplicant">
+
+    <!-- Title Label -->
+    <Label layoutX="223.0" layoutY="5.0" text="Edit Applicant">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" alignment="CENTER_RIGHT" layoutX="245.0" layoutY="39.0" prefHeight="17.0" prefWidth="352.0" text="" textAlignment="RIGHT" textFill="#006400">
+        <font>
+            <Font size="12.0" />
+        </font>
+    </Label>
+
+    <!-- TableView for Applicants -->
+    <TableView fx:id="applicantsTableView" layoutX="20.0" layoutY="105.0" prefHeight="240.0" prefWidth="560.0">
+        <columns>
+            <TableColumn fx:id="applicantIdCol" prefWidth="100.0" text="Applicant ID" />
+            <TableColumn fx:id="nameCol" prefWidth="150.0" text="Name" />
+            <TableColumn fx:id="circularIdCol" prefWidth="120.0" text="Circular ID" />
+            <TableColumn fx:id="statusCol" prefWidth="150.0" text="Status" />
+        </columns>
+    </TableView>
+    <Label layoutX="20.0" layoutY="69.0" text="Applicant ID: " />
+    <TextField fx:id="applicantIdTF" layoutX="108.0" layoutY="65.0" />
+    <Button layoutX="300.0" layoutY="65.0" mnemonicParsing="false" onAction="#loadButtonOA" text="Load">
+        <font>
+            <Font name="System Bold" size="13.0" />
+        </font>
+    </Button>
+
+    <!-- Delete Button -->
+    <Button layoutX="420.0" layoutY="365.0" onAction="#editButtonOA" prefHeight="27.0" prefWidth="160.0" text="Edit">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+
+    <!-- Back to Dashboard Button -->
+    <Button layoutX="20.0" layoutY="365.0" onAction="#backToDashboardButtonOA" prefHeight="27.0" prefWidth="150.0" text="Back to Dashboard">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+
+
+</AnchorPane>

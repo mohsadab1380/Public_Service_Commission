@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="14.0" style="-fx-background-color: #f2f5f9;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user_2411699_controller.LoginController">
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+    </padding>
+
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Public Service Commission" />
+    <Label style="-fx-font-size: 14px;" text="Accountant and Examiner Workspace" />
+
+    <VBox maxWidth="380.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #d8dee9; -fx-border-radius: 8;">
+        <padding>
+            <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+        </padding>
+
+        <Label text="User ID" />
+        <TextField fx:id="userIdField" promptText="4 or 8 character user ID" />
+
+        <Label text="Password" />
+        <PasswordField fx:id="passwordField" promptText="Minimum 8 characters" />
+
+        <HBox spacing="10.0">
+            <Button defaultButton="true" onAction="#onLoginClick" text="Log in" />
+            <Button onAction="#onApplicantClick" text="Register as Applicant" />
+        </HBox>
+
+        <Label fx:id="messageLabel" style="-fx-text-fill: #b00020;" wrapText="true" />
+    </VBox>
+
+    <Label style="-fx-text-fill: #6b7280;" text="Accountant: 5555 / Account2026          Examiner: 6666 / Examiner2026" />
+</VBox>

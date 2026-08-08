@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="602.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.EnsuresecurityViewController">
+   <children>
+      <Text layoutX="21.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Informations :" />
+      <Button layoutX="21.0" layoutY="546.0" mnemonicParsing="false" onAction="#acknowledgeSecurityReportButtonOA" text="Acknowledge Security Report" />
+      <Button layoutX="214.0" layoutY="24.0" mnemonicParsing="false" onAction="#securityMonitoringButtonOA" text="Security Monitoring" />
+      <ComboBox fx:id="examInfoCB" layoutX="139.0" layoutY="80.0" prefWidth="150.0" />
+      <Button layoutX="214.0" layoutY="135.0" mnemonicParsing="false" onAction="#processSecurityMonitoringButtonOA" text="Process Security Monitoring" />
+      <Label fx:id="checkingMonitoringRequirementsLabel" layoutX="228.0" layoutY="194.0" text="Checking monitoring requirements" />
+      <Label fx:id="verifyingSecurityStaffAssignmentsLabel" layoutX="228.0" layoutY="225.0" text="Verifying security staff assignments " />
+      <Label fx:id="processingSecurityMonitoringRecordsLabel" layoutX="225.0" layoutY="268.0" text="Processing security monitoring records" />
+      <TextArea fx:id="displaysSecurityStatusDashboardTA" layoutX="200.0" layoutY="301.0" prefHeight="200.0" prefWidth="200.0" text="Displays security status dashboard " />
+      <Label fx:id="confirmationMessageAlertLabel" layoutX="307.0" layoutY="550.0" text="Confirmation message Alert " />
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="553.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cen413.public_service_commission.id2220973.GenerateperformanceViewController">
+   <children>
+      <Text layoutX="26.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reporting Period :" />
+      <Button layoutX="29.0" layoutY="498.0" mnemonicParsing="false" onAction="#exportReportButtonOA" text="Export Report" />
+      <Button layoutX="248.0" layoutY="14.0" mnemonicParsing="false" onAction="#performanceReportsButtonOA" text="Performance Reports" />
+      <ComboBox fx:id="reportingPeriodCB" layoutX="150.0" layoutY="66.0" prefWidth="150.0" />
+      <Button layoutX="248.0" layoutY="125.0" mnemonicParsing="false" onAction="#processPerformanceReportsButtonOA" text="Process Performance Reports" />
+      <Label fx:id="checkingReportingPeriodValidityLabel" layoutX="211.0" layoutY="195.0" text="Checking reporting period validity " />
+      <Label fx:id="verifyingExaminationRecordsAvailabilityLabel" layoutX="208.0" layoutY="225.0" text="Verifying examination records availability" />
+      <Label fx:id="processingExaminationAndAttendanceDataLabel" layoutX="208.0" layoutY="259.0" text="Processing examination and attendance data " />
+      <TextArea fx:id="displaysCentrePerformanceReportTA" layoutX="200.0" layoutY="290.0" prefHeight="108.0" prefWidth="200.0" text="Displays centre performance report " />
+      <Label fx:id="downloadableReportFileAlertLabel" layoutX="308.0" layoutY="498.0" text="Downloadable report file Alert" />
+   </children>
+</AnchorPane>
